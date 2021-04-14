@@ -1,0 +1,10 @@
+{
+  "contractsDir": "contracts",
+  "outputDir": "src/clarion",
+  "contracts": [
+    {
+      "file": "simple-counter.clar",
+      "address": "ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA"
+    }
+  ]
+}
