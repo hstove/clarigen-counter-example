@@ -1,8 +1,29 @@
 import { ClarityAbi } from '@clarigen/core';
 
 // prettier-ignore
-export const SimpleCounterInterface: ClarityAbi = {
+export const CounterInterface: ClarityAbi = {
   "functions": [
+    {
+      "access": "private",
+      "args": [],
+      "name": "mint",
+      "outputs": {
+        "type": {
+          "response": {
+            "error": "uint128",
+            "ok": "bool"
+          }
+        }
+      }
+    },
+    {
+      "access": "private",
+      "args": [],
+      "name": "mint-amount",
+      "outputs": {
+        "type": "uint128"
+      }
+    },
     {
       "access": "public",
       "args": [],
@@ -10,7 +31,7 @@ export const SimpleCounterInterface: ClarityAbi = {
       "outputs": {
         "type": {
           "response": {
-            "error": "none",
+            "error": "uint128",
             "ok": "int128"
           }
         }
@@ -23,7 +44,7 @@ export const SimpleCounterInterface: ClarityAbi = {
       "outputs": {
         "type": {
           "response": {
-            "error": "none",
+            "error": "uint128",
             "ok": "int128"
           }
         }
@@ -47,6 +68,11 @@ export const SimpleCounterInterface: ClarityAbi = {
   "maps": [],
   "non_fungible_tokens": [],
   "variables": [
+    {
+      "access": "constant",
+      "name": "decimals",
+      "type": "uint128"
+    },
     {
       "access": "variable",
       "name": "counter",

@@ -5,6 +5,18 @@
     {
       "file": "simple-counter.clar",
       "address": "ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA"
+    },
+    {
+      "file": "ft-trait.clar",
+      "address": "ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA"
+    },
+    {
+      "file": "counter-coin.clar",
+      "address": "ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA"
+    },
+    {
+      "file": "counter.clar",
+      "address": "ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA"
     }
   ]
 }

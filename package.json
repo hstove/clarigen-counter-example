@@ -3,17 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clarion": "../clarion/packages/cli/bin/run",
+    "clarigen": "../clarion/packages/cli/bin/run",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@clarion/cli": "link:../clarion/packages/cli",
-    "@clarion/core": "link:../clarion/packages/core",
-    "@clarion/test": "link:../clarion/packages/test",
-    "@clarion/web": "link:../clarion/packages/web",
+    "@clarigen/cli": "link:../clarion/packages/cli",
+    "@clarigen/core": "link:../clarion/packages/core",
+    "@clarigen/test": "link:../clarion/packages/test",
+    "@clarigen/web": "link:../clarion/packages/web",
+    "@stacks/ui": "^7.8.0",
+    "@stacks/ui-core": "^7.3.0",
+    "@stacks/ui-theme": "^7.5.0",
+    "@stacks/ui-utils": "^7.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -47,11 +51,13 @@
     ]
   },
   "devDependencies": {
-    "@blockstack/clarity-native-bin": "^0.3.10",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.4"
   },
   "resolutions": {
-    "@blockstack/clarity-native-bin": "0.3.10"
+    "@clarigen/cli": "link:../clarion/packages/cli",
+    "@clarigen/core": "link:../clarion/packages/core",
+    "@clarigen/test": "link:../clarion/packages/test",
+    "@clarigen/web": "link:../clarion/packages/web"
   }
 }

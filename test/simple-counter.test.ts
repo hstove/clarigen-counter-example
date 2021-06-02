@@ -1,5 +1,5 @@
-import { TestProvider } from "@clarion/test";
-import { Transaction } from "@clarion/core";
+import { TestProvider } from "@clarigen/test";
+import { Transaction } from "@clarigen/core";
 import {
   simpleCounterInfo,
   SimpleCounterContract,
