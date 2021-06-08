@@ -1,6 +1,6 @@
 {
   "contractsDir": "contracts",
-  "outputDir": "src/clarion",
+  "outputDir": "src/clarigen",
   "contracts": [
     {
       "file": "simple-counter.clar",

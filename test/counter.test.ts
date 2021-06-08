@@ -1,4 +1,4 @@
-import { TestProvider } from "@clarigen/test";
+import { TestProvider, txErr, txOk } from "@clarigen/test";
 
 import { counterInfo, CounterContract } from '@contracts/counter';
 import { ftTraitInfo } from "@contracts/ft-trait";
@@ -9,12 +9,6 @@ const bob = 'ST1TWA18TSWGDAFZT377THRQQ451D1MSEM69C761';
 
 let counter: CounterContract;
 let token: CounterCoinContract;
-
-async function getCounter() {
-  const response = await counter.getCounter();
-  if (!response.isOk()) throw new Error("Error returned from `get-counter`");
-  return response.value;
-}
 
 beforeAll(async () => {
   const contracts = await TestProvider.fromContracts({
@@ -28,18 +22,13 @@ beforeAll(async () => {
 });
 
 test('Starts at zero', async () => {
-  const current = await getCounter();
+  const current = await counter.getCounter();
   expect(current).toEqual(0);
 });
 
 test('can increment', async () => {
-  const tx = counter.increment();
-  const receipt = await tx.submit({ sender: alice });
-  const result = await receipt.getResult();
-  if (!result.isOk) {
-    throw new Error('Invalid tx')
-  }
-  expect(await getCounter()).toEqual(1);
+  await txOk(counter.increment(), alice);
+  expect(await counter.getCounter()).toEqual(1);
 });
 
 test('balance is updated', async () => {
@@ -49,23 +38,28 @@ test('balance is updated', async () => {
 
 test('can decrement', async () => {
   const oldBalance = (await token.getBalance(alice))._unsafeUnwrap();
-  const receipt = await counter.decrement().submit({ sender: alice });
-  const result = await receipt.getResult();
-  if (!result.isOk) throw new Error('Invalid');
-  expect(await getCounter()).toEqual(0);
+  await txOk(counter.decrement(), alice);
+  expect(await counter.getCounter()).toEqual(0);
   const newBalance = (await token.getBalance(alice))._unsafeUnwrap();
   expect(newBalance - oldBalance).toEqual(1e8);
 });
 
 test('alice can transfer', async () => {
-  const tx = token.transfer(100, alice, bob, null);
-  const result = await (await tx.submit({ sender: alice })).getResult();
-  if (!result.isOk) throw new Error('Invalid')
+  const result = await txOk(token.transfer(100, alice, bob, null), alice);
   expect(result.assets.tokens[alice][`${alice}.counter-coin::counter-token`]).toEqual('100')
 });
 
 test('transfer with memo', async () => {
-  const tx = token.transfer(100, alice, bob, Buffer.from('hello', 'hex'));
-  const result = await (await tx.submit({ sender: alice })).getResult();
+  const result = await txOk(token.transfer(100, alice, bob, Buffer.from('hello', 'hex')), alice);
   expect(result.isOk).toBeTruthy();
+});
+
+test('bob cannot transfer more than he has', async () => {
+  const result = await txErr(token.transfer(250, bob, alice, null), bob);
+  expect(result.value).toEqual(1);
+});
+
+test('cannot transfer when sender is not tx-sender', async () => {
+  const result = await txErr(token.transfer(250, alice, bob, null), bob);
+  expect(result.value).toEqual(4);
 });

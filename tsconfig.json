@@ -19,7 +19,7 @@
     "paths": {
       "@common/*": ["common/*"],
       "@components/*": ["components/*"],
-      "@contracts/*": ["clarion/*"],
+      "@contracts/*": ["clarigen/*"],
       "@hooks/*": ["hooks/*"]
     }
   },

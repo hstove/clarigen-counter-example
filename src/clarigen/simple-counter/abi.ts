@@ -34,12 +34,7 @@ export const SimpleCounterInterface: ClarityAbi = {
       "args": [],
       "name": "get-counter",
       "outputs": {
-        "type": {
-          "response": {
-            "error": "none",
-            "ok": "int128"
-          }
-        }
+        "type": "int128"
       }
     }
   ],
