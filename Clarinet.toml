@@ -1,0 +1,19 @@
+[project]
+name = "clarinet"
+requirements = []
+
+[contracts.simpleCounter]
+path = "contracts/simple-counter.clar"
+depends_on = []
+
+[contracts.ftTrait]
+path = "contracts/ft-trait.clar"
+depends_on = []
+
+[contracts.counterCoin]
+path = "contracts/counter-coin.clar"
+depends_on = []
+
+[contracts.counter]
+path = "contracts/counter.clar"
+depends_on = []

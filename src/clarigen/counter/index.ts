@@ -10,6 +10,6 @@ export const counterContract = (provider: BaseProvider) => {
 
 export const counterInfo: Contract<CounterContract> = {
   contract: counterContract,
-  address: 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA',
+  address: 'ST1HTBVD3JG9C05J7HBJTHGR0GGW7KXW28M5JS8QE',
   contractFile: 'contracts/counter.clar',
 };

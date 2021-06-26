@@ -20,6 +20,7 @@
       "@common/*": ["common/*"],
       "@components/*": ["components/*"],
       "@contracts/*": ["clarigen/*"],
+      "@contracts": ["clarigen"],
       "@hooks/*": ["hooks/*"]
     }
   },

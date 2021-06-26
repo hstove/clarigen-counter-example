@@ -1,5 +1,6 @@
 import { ClarityTypes, Transaction } from '@clarigen/core';
 
+// prettier-ignore
 export interface CounterCoinContract {
   getTokenUri: () => Transaction<string | null, null>;
   mint: (recipient: string, amount: number) => Transaction<boolean, number>;

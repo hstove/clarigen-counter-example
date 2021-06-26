@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# Clarigen demo - counter contract
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is an example usage of [clarigen](https://github.com/hstove/clarigen), a developer tool for interacting with Clarity smart contracts.
 
-## Available Scripts
+There are two examples provided:
 
-In the project directory, you can run:
+- `simple-counter`: a simple contract that tracks a global `counter` variable. Users can make transactions to increment and decrement this value
+- `counter-coin`: An extension of `simple-counter` that mints a fungible token every time a user changes the counter variable
 
-### `yarn start`
+## `simple-counter`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+One contract with public and read-only methods
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Contract**: [`./contracts/simple-counter.clar`](./contracts/simple-counter.clar)
+**Tests**: [`./tests/simple-counter.test.ts`](./tests/simple-counter.test.ts)
 
-### `yarn test`
+## `counter-coin`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Three separate contracts, which compose of the fungible token trait, the token contract, and the counter contract that interacts with the token.
 
-### `yarn build`
+**Contracts**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [`./contracts/ft-trait.clar`](./contracts/ft-trait.clar)
+- [`./contracts/counter-coin.clar`](./contracts/counter-coin.clar)
+- [`./contracts/counter.clar`](./contracts/counter.clar)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can clone this repo to get a feel for using Clarigen and Clarity.
 
-### `yarn eject`
+Install dependencies with `yarn`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Whenever you update a Clarity contract, run `yarn clarigen`, which will automatically generate type files in `./src/clarigen`. You can also run `yarn clarigen --watch` to automatically generate types whenever you save a `.clar` file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run tests with `yarn test` or `yarn test --watch`

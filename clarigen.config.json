@@ -1,6 +1,7 @@
 {
   "contractsDir": "contracts",
   "outputDir": "src/clarigen",
+  "clarinet": ".",
   "contracts": [
     {
       "file": "simple-counter.clar",

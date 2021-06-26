@@ -1,8 +1,8 @@
-(impl-trait 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA.ft-trait.sip-010-trait)
+(impl-trait .ft-trait.sip-010-trait)
 
 (define-fungible-token counter-token)
 
-(define-constant authorized-minter 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA.counter)
+(define-constant authorized-minter .counter)
 
 ;; get the token balance of owner
 (define-read-only (get-balance (owner principal))

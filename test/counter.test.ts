@@ -1,9 +1,8 @@
 import { TestProvider, txErr, txOk } from "@clarigen/test";
 
-import { counterInfo, CounterContract } from '@contracts/counter';
-import { ftTraitInfo } from "@contracts/ft-trait";
-import { CounterCoinContract, counterCoinInfo } from "@contracts/counter-coin";
+import { CounterCoinContract, CounterContract, contracts, accounts } from '@contracts';
 
+const deployer = accounts.deployer.address;
 const alice = 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA';
 const bob = 'ST1TWA18TSWGDAFZT377THRQQ451D1MSEM69C761';
 
@@ -11,14 +10,10 @@ let counter: CounterContract;
 let token: CounterCoinContract;
 
 beforeAll(async () => {
-  const contracts = await TestProvider.fromContracts({
-    trait: ftTraitInfo,
-    token: counterCoinInfo,
-    counter: counterInfo,
-  });
+  const deployed = await TestProvider.fromContracts(contracts);
 
-  counter = contracts.counter.contract;
-  token = contracts.token.contract;
+  counter = deployed.counter.contract;
+  token = deployed.counterCoin.contract;
 });
 
 test('Starts at zero', async () => {
@@ -46,7 +41,7 @@ test('can decrement', async () => {
 
 test('alice can transfer', async () => {
   const result = await txOk(token.transfer(100, alice, bob, null), alice);
-  expect(result.assets.tokens[alice][`${alice}.counter-coin::counter-token`]).toEqual('100')
+  expect(result.assets.tokens[alice][`${deployer}.counter-coin::counter-token`]).toEqual('100')
 });
 
 test('transfer with memo', async () => {
