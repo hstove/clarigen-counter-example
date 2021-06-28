@@ -10,10 +10,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@clarigen/cli": "link:../clarion/packages/cli",
-    "@clarigen/core": "link:../clarion/packages/core",
-    "@clarigen/test": "link:../clarion/packages/test",
-    "@clarigen/web": "link:../clarion/packages/web",
+    "@clarigen/cli": "0.1.1",
+    "@clarigen/test": "0.1.1",
     "@stacks/ui": "^7.8.0",
     "@stacks/ui-core": "^7.3.0",
     "@stacks/ui-theme": "^7.5.0",
@@ -53,11 +51,5 @@
   "devDependencies": {
     "jest": "^26.6.3",
     "ts-jest": "^26.5.4"
-  },
-  "resolutions": {
-    "@clarigen/cli": "link:../clarion/packages/cli",
-    "@clarigen/core": "link:../clarion/packages/core",
-    "@clarigen/test": "link:../clarion/packages/test",
-    "@clarigen/web": "link:../clarion/packages/web"
   }
 }
