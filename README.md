@@ -1,6 +1,6 @@
 # Clarigen demo - counter contract
 
-This repo is an example usage of [clarigen](https://github.com/hstove/clarigen), a developer tool for interacting with Clarity smart contracts.
+This repo is an example usage of [clarigen](https://github.com/obylabs/clarigen), a developer tool for interacting with Clarity smart contracts.
 
 There are two examples provided:
 
