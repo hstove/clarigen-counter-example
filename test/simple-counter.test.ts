@@ -18,19 +18,19 @@ describe("Counter contract", () => {
 
   test("initial counter is 0", async () => {
     const response = await counter.getCounter();
-    expect(response).toEqual(0);
+    expect(response).toEqual(0n);
   });
 
   test("increment counter", async () => {
     const tx = counter.increment();
     const result = await txOk(tx, alice);
-    expect(result.value).toEqual(1);
-    await expect(counter.getCounter()).resolves.toEqual(1);
+    expect(result.value).toEqual(1n);
+    await expect(counter.getCounter()).resolves.toEqual(1n);
   });
 
   test("decrement counter", async () => {
     const result = await txOk(counter.decrement(), alice);
-    expect(result.value).toEqual(0);
-    await expect(counter.getCounter()).resolves.toEqual(0);
+    expect(result.value).toEqual(0n);
+    await expect(counter.getCounter()).resolves.toEqual(0n);
   });
 });
