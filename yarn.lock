@@ -1150,56 +1150,50 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blockstack/clarity-native-bin@0.3.7-clarion":
-  version "0.3.7-clarion"
-  resolved "https://registry.yarnpkg.com/@blockstack/clarity-native-bin/-/clarity-native-bin-0.3.7-clarion.tgz#2435cded50884219f459a825803796e68c8fab79"
-  integrity sha512-k8njMl4XgklXOexYy5HzC3aNcJI47Unq3CZVSs8VwDze/rjZ2jWglpR23are3ddKsThefqKF60AhkX8MA/o2gA==
-  dependencies:
-    fs-extra "^8.0.1"
-    node-fetch "^2.6.0"
-    semver "^6.1.1"
-    unzipper "^0.10.11"
-
-"@blockstack/clarity@0.3.7-clarion":
-  version "0.3.7-clarion"
-  resolved "https://registry.yarnpkg.com/@blockstack/clarity/-/clarity-0.3.7-clarion.tgz#fadcb607f31f8b4c3381e147d95edcfc5f34a660"
-  integrity sha512-wyM6zEBbcl2x0K/j9z+O5xBimxziHdB8lNudpd+VYtSGZ3L+rjS/kg3lKpNY4YKk7LWrd2B95NX22AHOXbSrag==
-
 "@blockstack/stacks-blockchain-api-types@^0.53.1":
   version "0.53.5"
   resolved "https://registry.yarnpkg.com/@blockstack/stacks-blockchain-api-types/-/stacks-blockchain-api-types-0.53.5.tgz#db7d69d5e106f6e96806b9930c8b7485c497412a"
   integrity sha512-bTVH8iFzIoqdnZCJ+lwV/KsUz2KbrQ5Rn9jfckicqivOdphV6XcKsLoXDKo2N6uepnTePrZxXT2TjrNkYwFpfw==
 
-"@clarigen/cli@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@clarigen/cli/-/cli-0.1.1.tgz#0651b820084b0f9eedf480f0a713388f8585f8bc"
-  integrity sha512-X24D822Ar/yHxTkVwVnSuIs5f2ENKBCCrDzA/pCzmH4zP+kjYTfH6DojwLMtJ34nBx7Dnb9uq7JlndG2JpYDag==
+"@clarigen/cli@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@clarigen/cli/-/cli-0.2.5.tgz#fdb61780f9a20e2030466e07326929e33ad9a899"
+  integrity sha512-CVePr09pcvMGom6jtlsFBe1NIrlatySAJqDR9vXuPZjCYOKQgcLrC4YhO5ETXtx9CYJvPiZ9JVHvCWGPkV4YNA==
   dependencies:
-    "@blockstack/clarity" "0.3.7-clarion"
-    "@blockstack/clarity-native-bin" "0.3.7-clarion"
-    "@clarigen/core" "^0.1.0"
+    "@clarigen/core" "0.2.3"
+    "@clarigen/native-bin" "0.2.3"
     "@ltd/j-toml" "1.12.2"
     "@oclif/command" "^1.8.0"
     "@stacks/wallet-sdk" "1.0.0-wallet-sdk.4"
     chalk "4.1.0"
+    chokidar "3.5.1"
     ora "5.4.0"
 
-"@clarigen/core@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@clarigen/core/-/core-0.1.0.tgz#1ff04ab7dc66f34b4f579de4f7806a9e905bfdba"
-  integrity sha512-gW67K4kpX/rNfC1LFdynhw+QXlPZU4e4KWpZN+x9hL9wYo7FaqOkTgOg/YhZvrftlQP87it3y1EgBoBMB1/0YA==
+"@clarigen/core@0.2.3", "@clarigen/core@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@clarigen/core/-/core-0.2.3.tgz#60da2a57504acc6486388c32d679c5fb64699825"
+  integrity sha512-GlYJGW1u6XBecuqVDpoXiqBtQGG/UqwbhjuT2PjnmBbzmd4r8TmLP6YdBtmezy8Etc42WpfDnoBYKiXvfxOBlA==
   dependencies:
     "@stacks/transactions" "^1.3.3"
     neverthrow "4.2.1"
 
-"@clarigen/test@0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@clarigen/test/-/test-0.1.1.tgz#f7e28ae32cd1af8d6812d88a438ee698d6e13187"
-  integrity sha512-eCK508wvIkBl8gDhC9zT84HXm9D4NvkbfxovgxPRyYFhnqBNOVu6UsgWXDl6ZU3ZgVSt+APH1nxlih2z/OQyGg==
+"@clarigen/native-bin@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@clarigen/native-bin/-/native-bin-0.2.3.tgz#bb47cbb8b3207e8db23ce0a81fff14b06cc3e036"
+  integrity sha512-bHmht0kfTOpAEe8CuIrGI+QiXNHCUGmVIaF9IheZlAWgFMrAlVSdqe3pMcHcEoFk8TD+e4vIG6V4SSRIZhQBsA==
   dependencies:
-    "@blockstack/clarity" "0.3.7-clarion"
-    "@blockstack/clarity-native-bin" "0.3.7-clarion"
-    "@clarigen/core" "^0.1.0"
+    "@clarigen/core" "0.2.3"
+    fs-extra "^10.0.0"
+    node-fetch "^2.6.0"
+    unzipper "^0.10.11"
+
+"@clarigen/test@^0.2.3":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@clarigen/test/-/test-0.2.6.tgz#da98d335b0ba43afe3b69ede74f34bd7e2b962aa"
+  integrity sha512-M9j8MBuwqFWAr1Wz3nEphGtTOhWM7ZsZSfsK3xohmmk5+PaPC0092hpGpkMUJPprJtmrS+I0xYLqYOfDXETaUA==
+  dependencies:
+    "@clarigen/core" "0.2.3"
+    "@clarigen/native-bin" "0.2.3"
     "@stacks/transactions" "^1.3.3"
 
 "@cnakazawa/watch@^1.0.3":
@@ -4399,14 +4393,6 @@ buffer@^5.5.0, buffer@^5.6.0:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
 
-buffer@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-6.0.3.tgz#2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6"
-  integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
-  dependencies:
-    base64-js "^1.3.1"
-    ieee754 "^1.2.1"
-
 buffers@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/buffers/-/buffers-0.1.1.tgz#b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb"
@@ -4624,6 +4610,21 @@ check-types@^11.1.1:
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.1.2.tgz#86a7c12bf5539f6324eb0e70ca8896c0e38f3e2f"
   integrity sha512-tzWzvgePgLORb9/3a0YenggReLKAIb2owL03H2Xdoe5pKcUyWRSEQ8xfCar8t2SIAuEDwtmx2da1YB52YuHQMQ==
 
+chokidar@3.5.1, chokidar@^3.4.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
+  integrity sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
+  dependencies:
+    anymatch "~3.1.1"
+    braces "~3.0.2"
+    glob-parent "~5.1.0"
+    is-binary-path "~2.1.0"
+    is-glob "~4.0.1"
+    normalize-path "~3.0.0"
+    readdirp "~3.5.0"
+  optionalDependencies:
+    fsevents "~2.3.1"
+
 chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -4642,21 +4643,6 @@ chokidar@^2.1.8:
     upath "^1.1.1"
   optionalDependencies:
     fsevents "^1.2.7"
-
-chokidar@^3.4.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
-  integrity sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
-  dependencies:
-    anymatch "~3.1.1"
-    braces "~3.0.2"
-    glob-parent "~5.1.0"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.5.0"
-  optionalDependencies:
-    fsevents "~2.3.1"
 
 chownr@^1.1.1:
   version "1.1.4"
@@ -6664,6 +6650,15 @@ from2@^2.1.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
+fs-extra@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
+  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
@@ -6673,7 +6668,7 @@ fs-extra@^7.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^8.0.1, fs-extra@^8.1, fs-extra@^8.1.0:
+fs-extra@^8.1, fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -7261,7 +7256,7 @@ identity-obj-proxy@3.0.0:
   dependencies:
     harmony-reflect "^1.4.6"
 
-ieee754@^1.1.13, ieee754@^1.1.4, ieee754@^1.2.1:
+ieee754@^1.1.13, ieee754@^1.1.4:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
@@ -7871,7 +7866,7 @@ jest-circus@26.6.0:
     stack-utils "^2.0.2"
     throat "^5.0.0"
 
-jest-cli@^26.6.0, jest-cli@^26.6.3:
+jest-cli@^26.6.0:
   version "26.6.3"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-26.6.3.tgz#43117cfef24bc4cd691a174a8796a532e135e92a"
   integrity sha512-GF9noBSa9t08pSyl3CY4frMrqp+aQXFGFkf5hEPbh/pIUFYWMK6ZLTfbmadxJVcJrdRoChlWQsA2VkJcDFK8hg==
@@ -8269,15 +8264,6 @@ jest@26.6.0:
     "@jest/core" "^26.6.0"
     import-local "^3.0.2"
     jest-cli "^26.6.0"
-
-jest@^26.6.3:
-  version "26.6.3"
-  resolved "https://registry.yarnpkg.com/jest/-/jest-26.6.3.tgz#40e8fdbe48f00dfa1f0ce8121ca74b88ac9148ef"
-  integrity sha512-lGS5PXGAzR4RF7V5+XObhqz2KZIDUA1yD0DG6pBVmy10eh0ZIXQImRuzocsI/N2XZ1GrLFwTS27In2i2jlpq1Q==
-  dependencies:
-    "@jest/core" "^26.6.3"
-    import-local "^3.0.2"
-    jest-cli "^26.6.3"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -8796,11 +8782,6 @@ methods@~1.1.2:
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
 
-micro-base58@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/micro-base58/-/micro-base58-0.4.3.tgz#35915f4df752ca70026906e09cd19dd4c7b22742"
-  integrity sha512-OF2lAJv11ciOWLPHynaNCnhjv8zLy6v3uF1Lc0pT9S4sNDmBSGT/YBlQmaQF7eEdinjJrbM+aF0k+sWXHwkmGg==
-
 micro-memoize@^4.0.9:
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/micro-memoize/-/micro-memoize-4.0.9.tgz#b44a38c9dffbee1cefc2fd139bc8947952268b62"
@@ -9105,11 +9086,6 @@ no-case@^3.0.4:
   dependencies:
     lower-case "^2.0.2"
     tslib "^2.0.3"
-
-noble-secp256k1@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/noble-secp256k1/-/noble-secp256k1-1.1.3.tgz#49d2dc49827addb843a3189a0cea0a4fc06e17ab"
-  integrity sha512-FmPNbkZmQsqhlpEUYROlw85eYt7X845u4yuUTsrCggL7Hzpfe08i/7StOrnfZSSezpXDhSwtuBwdei9xvMiYYA==
 
 node-fetch@2.6.1, node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
@@ -10848,7 +10824,7 @@ react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-scripts@4.0.3:
+react-scripts@latest:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-4.0.3.tgz#b1cafed7c3fa603e7628ba0f187787964cb5d345"
   integrity sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A==
@@ -11537,7 +11513,7 @@ semver@7.x:
   dependencies:
     lru-cache "^6.0.0"
 
-semver@^6.0.0, semver@^6.1.1, semver@^6.3.0:
+semver@^6.0.0, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
